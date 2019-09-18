@@ -5,14 +5,28 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1> {{title}} </h1>
-    <p>Welcome to  {{title}} </p>
+    
+    <h1>Bitcoin Chart</h1>
+from <input id="start-date" type="date">
+to <input type="date" id="end-date">
 
-    <canvas id="myChart" width="400" height="400"></canvas>
+currency<select id="currency">
+    <option>USD</option>
+    <option>EUR</option>
+  </select>
+
+  <div id="min-max-container">
+        <h2>Values</h2>
+        <p>Minimum value is: <span id="min-value"></span></p>
+        <p>Maximum value is: <span id="max-value"></span></p>
+    </div>
+
+    <canvas id="myChart"></canvas>
+
+    
     
   </body>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
   <script src="/javascripts/financial-data.js" charset="utf-8"></script>
-
 </html>
